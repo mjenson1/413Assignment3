@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Movie Madness</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
+</head>
+
+<body>
+    <h1>@ViewBag.Title</h1>
+
+    <h4>Navigation Menu</h4>
+    <a asp-action="Index">Home</a><br />
+    <a asp-action="AddMovies">Click to add movies</a><br />
+    <a asp-action="MovieList">View Movies</a><br />
+    <a asp-action="Podcasts">View Podcasts</a><br />
+    <br /><br />
+
+    @RenderBody()
+
+    <br />
+    <br />
+    <footer>Big Money Movies</footer>
+</body>
+
+</html>
