@@ -37,7 +37,7 @@ namespace _413Assignment3.Controllers
         [HttpPost]
         public IActionResult AddMovies(MovieResponse movieResponse)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) //If the movie is valid it will be added
             {
                 MovieStorage.AddMovie(movieResponse);
                 return View("MovieConfirmation", movieResponse);
@@ -50,7 +50,7 @@ namespace _413Assignment3.Controllers
 
         public IActionResult MovieList()
         {
-            return View(MovieStorage.Movies.Where(movie => movie.Title != "Independence Day"));
+            return View(MovieStorage.Movies.Where(movie => movie.Title != "Independence Day")); //Validated to see if it is Indepedence Day
         }
 
         public IActionResult Privacy()
